@@ -7,13 +7,13 @@
 
 # Resumo
 
-Comunicação é a chave em qualquer que seja o ato sendo realizado. Com isso em vista, percebi dois gargalos principais na empresa que trabalho, ao qual essa aplicação, de forma prática e simples poderá resolver.
+Comunicação é a chave em qualquer que seja o ato sendo realizado. Com isso em vista, percebi dois gargalos principais no dia a dia, ao qual essa aplicação, de forma prática e simples poderá resolver.
 
-Sendo assim, a facilidade de ter *templates* prontos para *posts* de diferentes contextos de atuação e para diferentes finalidades tem o potencial de poupar tempo e esforço. No time de *marketing* havia notado uma sequência maçante de passos, ao qual os integrantes dessa área possuem diferentes objetivos de publicação, tendo então que entrar de uma em uma manualmente. E, no meu time de desenvolvimento, o problema já estava relacionado simplesmente com a comunicação referente à novas atualizações do produto principal.
+Sendo assim, a facilidade de ter *templates* prontos para *posts* de diferentes contextos de atuação e para diferentes finalidades tem o potencial de poupar tempo e esforço. No time de *marketing* pode ocorrer uma sequência maçante de passos, ao qual os integrantes dessa área possuem diferentes objetivos de publicação, tendo então que entrar de uma em uma manualmente. E, em um time de desenvolvimento, o problema já pode ser relacionado simplesmente com a comunicação referente à novas atualizações do produto principal.
 
-Portanto, Synk é um projeto que visa resolver essas pendências de uma forma prática e simples, sem exigir uma adaptação de dia a dia muito destacável, nem a memória muscular do dia a dia de quem a usar. Então por meio de templates e integrações, a criação de *posts* e o alcance à linha final das mensagens ficará mais simples e rápido.
+Portanto, Synk é um projeto que visa resolver essas e outras pendências de uma forma prática e simples, sem exigir uma adaptação de dia a dia muito grande, nem o reaprendizado total que é o uso de uma nova ferramenta. Então por meio de templates e integrações, a criação de *posts* e o alcance à linha final das mensagens ficará mais simples e rápido.
 
-Synk não é um CRM e nem visa ser. O foco dessa aplicação é ser uma camada de abstração para um esforço desnecessário e repetitivo que um ser humano teria que fazer, ou então proporcionar uma forma fácil de realizar algo que outro ser humano não consegue fazer por falta de tempo.
+Synk não é um CRM e nem visa ser. O foco dessa aplicação é ser uma camada de abstração que alimina um esforço desnecessário e repetitivo que um ser humano teria que fazer, ou então proporcionar uma forma fácil de realizar algo que outro ser humano não consegue fazer por falta de tempo.
 
 ## 1. Introdução
 
