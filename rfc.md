@@ -7,13 +7,13 @@
 
 # Resumo
 
-Tudo começou a partir de um ponto que estava sendo notado em meu time de desenvolvimento e também em colegas de empresa do setor de *marketing*. Uma grande dificuldade contida nesses dois contextos era o entrave de conseguir compartilhar *posts* de maneira prática e rápida em plataformas distintas de uma forma simples e prática.
+Comunicação é a chave em qualquer que seja o ato sendo realizado. Com isso em vista, percebi dois gargalos principais na empresa que trabalho, ao qual essa aplicação, de forma prática e simples poderá resolver.
 
-Em primeiro ponto, pode-se destacar o setor de *marketing* interno, que era responsável também pelas mensagens internas da empresa e, ao criar um novo anúncio, tinha de pegar o mesmo conteúdo e compartilhar em redes diferentes, de formas diferentes, mas querendo transmitir a mesma mensagem.
+Sendo assim, a facilidade de ter *templates* prontos para *posts* de diferentes contextos de atuação e para diferentes finalidades tem o potencial de poupar tempo e esforço. No time de *marketing* havia notado uma sequência maçante de passos, ao qual os integrantes dessa área possuem diferentes objetivos de publicação, tendo então que entrar de uma em uma manualmente. E, no meu time de desenvolvimento, o problema já estava relacionado simplesmente com a comunicação referente à novas atualizações do produto principal.
 
-Em segundo ponto, é destacável o caso de uso do desenvolvimento, que ao cuidar de um grande projeto ERP, realizava melhorias nesse mesmo *software*, contudo - por não ter um caminho fixo - não compartilhava as informações de atualização e outros pontos do sistema. Sendo assim, não ficava claro o que já tinha sido feito, e assim a margem para repetições de código ou processos aumentava consideravelmente a cada vez.
+Portanto, Synk é um projeto que visa resolver essas pendências de uma forma prática e simples, sem exigir uma adaptação de dia a dia muito destacável, nem a memória muscular do dia a dia de quem a usar. Então por meio de templates e integrações, a criação de *posts* e o alcance à linha final das mensagens ficará mais simples e rápido.
 
-Portanto, para resolver esses impecilhos é que surge o Synk, um gerenciador prático e rápido de *templates* de anúncio e *posts*. Fazendo então com que *layouts* conforme a plataforma escolhida possam ser guardados, organizando também por outros fatores desejados.
+Synk não é um CRM e nem visa ser. O foco dessa aplicação é ser uma camada de abstração para um esforço desnecessário e repetitivo que um ser humano teria que fazer, ou então proporcionar uma forma fácil de realizar algo que outro ser humano não consegue fazer por falta de tempo.
 
 ## 1. Introdução
 
