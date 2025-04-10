@@ -7,7 +7,13 @@
 
 # Resumo
 
-Breve descrição do conteúdo do documento, incluindo o propósito do projeto e os principais pontos de discussão.
+Tudo começou a partir de um ponto que estava sendo notado em meu time de desenvolvimento e também em colegas de empresa do setor de *marketing*. Uma grande dificuldade contida nesses dois contextos era o entrave de conseguir compartilhar *posts* de maneira prática e rápida em plataformas distintas de uma forma simples e prática.
+
+Em primeiro ponto, pode-se destacar o setor de *marketing* interno, que era responsável também pelas mensagens internas da empresa e, ao criar um novo anúncio, tinha de pegar o mesmo conteúdo e compartilhar em redes diferentes, de formas diferentes, mas querendo transmitir a mesma mensagem.
+
+Em segundo ponto, é destacável o caso de uso do desenvolvimento, que ao cuidar de um grande projeto ERP, realizava melhorias nesse mesmo *software*, contudo - por não ter um caminho fixo - não compartilhava as informações de atualização e outros pontos do sistema. Sendo assim, não ficava claro o que já tinha sido feito, e assim a margem para repetições de código ou processos aumentava consideravelmente a cada vez.
+
+Portanto, para resolver esses impecilhos é que surge o Synk, um gerenciador prático e rápido de *templates* de anúncio e *posts*. Fazendo então com que *layouts* conforme a plataforma escolhida possam ser guardados, organizando também por outros fatores desejados.
 
 ## 1. Introdução
 
