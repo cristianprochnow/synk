@@ -23,9 +23,9 @@ Synk não é um CRM e nem visa ser. O foco dessa aplicação é ser uma camada d
 
 ## 2. Descrição do Projeto
 
-- **Tema do Projeto**: Detalhes do tema, incluindo o produto ou ferramenta a ser desenvolvido.
-- **Problemas a Resolver**: Lista dos principais problemas que o projeto visa resolver.
-- **Limitações**: Delimitação dos problemas que o projeto não abordará.
+- **Tema do Projeto**: Synk é uma ferramenta para gerenciamento de templates para publicações em diversas redes sociais e meios de comunicação. Então por meio dessa aplicação, poderá gerenciar templates, customizar conforme deseja o texto, importar de alguma fonte, e após isso, publicar para qualquer uma das plataformas disponíveis para integração - desde que esteja configurada.
+- **Problemas a Resolver**: Um dos grandes problemas de ter que inserir o mesmo conteúdo em várias redes sociais e diversas fontes de comunicação é ter que ter o meso texto, em vários formatos. Ou, também, ter que entrar de aplicação em aplicação copiando e colando o texto para que fique todas as redes no mesmo formato. Sendo assim, Synk chega para resolver exatamente esse ponto, ao qual pode deixar pré-configurado diversos templates, pré-determinados para determinadas redes sociais para diferentes contextos. Então, ao invés de bolar o texto e ainda ter que selecionar onde publicar, como publicar e assim por diante, Synk já deixa tudo isso organizado e unificado para facilitar a vida.
+- **Limitações**: Aplicações CRM fazem algo parecido e até mais avançado, ao qual além de publicar, ainda retorna métricas de tudo aquilo que foi colocado no ar. Contudo, Synk não tem isso como objetivo, e o foco principal é facilitar o trabalho maçante de organizar tudo e categorizar o conteúdo de forma ideal. Portanto, o objetivo é a parte prática de criar o conteúdo e publicar, facilitando então a parte que mais gasta tempo e geralmente é negligenciada por ser considerada por muitos "trivial".
 
 ## 3. Especificação Técnica
 
