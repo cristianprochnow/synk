@@ -17,9 +17,9 @@ Synk não é um CRM e nem visa ser. O foco dessa aplicação é ser uma camada d
 
 ## 1. Introdução
 
-- **Contexto**: Breve descrição do contexto que envolve o projeto.
-- **Justificativa**: Explicação da relevância do projeto para o campo da engenharia de software.
-- **Objetivos**: Descrição do objetivo principal do projeto e de quaisquer objetivos secundários.
+- **Contexto**: Essa aplicação visa resolver problemas de gargalo em uma comunicação digital. Hoje em dia as pessoas estão totalmente presente em redes sociais ou outros meios de comunicação, sendo assim, é onde empresas também querem estar presente constantemente. Para esse processo, ter como objetivo a interação nas redes sociais é extremamente relevante, estando sempre perto de seu público. Além disso, a facilidade proporcionada por ter uma ferramenta que automatiza tarefas maçantes é de grande valia, principalmente no dia a dia corporativo ao qual tudo passa muito rápido. Sendo assim, é para isso que Synk surge, para proporcionar facilidade onde é tipicamente tudo baseado na escrita manual de comunicados e publicações.
+- **Justificativa**: A existência é justificada pelo tempo que vai ser preservado daqueles que realizam processos manuais e também em proporcionar facilidade para até mesmo que não tem tempo consiga realizar a publicação desejada. Essas publicações se referem à qualquer *post* em qualquer rede social disponível como integração na aplicação. Seja para um comunicado nas redes sociais, um *post* comercial no LinkedIn, um resumo da nova atualização que ocorreu no sistema ou produto que está sendo tratado por meio do Slack ou Teams, e assim segue. Nos dias atuais o tempo sempre parece que passa tão rápido, portanto fica evidente que qualquer forma de minimizar o gasto dele se torna um grande atrativo para qualquer uso.
+- **Objetivos**: Synk tem como objetivo ser uma plataforma integrada com diversas plataformas de comunicação e divulgação, oferecendo então uma interface prática para que o usuário possa salvar templates e rapidamente ajustá-los para publicação, tudo isso em poucos cliques e otimizando o que seja estático. O objetivo dessa aplicação não é ser um CRM e nem se tornar um, e sim resolver os problemas que ficam na base da pirâmide da produtividade e aos quais geralmente são gastos tanto tempo por serem considerados triviais - mas ainda sim volumétricos, gastando tempo.
 
 ## 2. Descrição do Projeto
 
