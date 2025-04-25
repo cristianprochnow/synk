@@ -29,12 +29,37 @@ Synk não é um CRM e nem visa ser. O foco dessa aplicação é ser uma camada d
 
 ## 3. Especificação Técnica
 
-Descrição detalhada da proposta, incluindo requisitos de software, protocolos, algoritmos, procedimentos, formatos de dados, etc.
+O projeto tem como objetivo o gerenciamento de templates que são relacionados a cada usuário. O uso desses templates poderá ser feito para publicação em redes sociais que a aplicação tiver integração. Cada uma dessas integrações vão necessitar das configurações específicas, contendo então os dados de acesso para cada uma que for desejada. Além disso, há também a funcionalidade de importar conteúdo de algum _post_ específico, para que o usuário possa transformar qualquer conteúdo em template. Partindo desse pressuposto, temos então os alicerces de:
+
+* Gerenciamento de usuário
+* Gerenciamento de templates
+* Gerenciamento de perfis de integração
+* Integração com redes sociais para realizar _posts_
+* Importação de conteúdo por meio de link
+* Interface avançada para edição de texto
 
 ### 3.1. Requisitos de Software
 - Apresentar os requisitos do tema proposto.
 - **Lista de Requisitos:** Apresentar uma lista contendo os Requisitos Funcionais (RF) e Não-Funcionais (RNF).
 - **Representação dos Requisitos:** Representar os RFs por meio de um Diagrama de Casos de Uso (UML).
+
+**Requisitos Funcionais**
+
+* RF001. O sistema deve permitir o cadastro de usuários por meio dos dados de nome, e-mail e senha
+* RF002. O sistema deve enviar e-mail de autenticação para validação de novos usuários, com um link clicável que servirá como confirmação da nova conta criada
+* RF003. O sistema deve permitir a edição dos dados do perfil do usuário como nome e senha, exigindo confirmação adicional para o segundo e também alteração da foto de perfil
+* RF004. O sistema deve validar o arquivo enviado como foto de perfil, restringindo pelo tamanho de arquivo (2mb) ou formato enviados (png, jpg, gif).
+* RF005. O sistema deve permitir a inativação dos dados do usuário, caso desejado
+* RF006. O sistema deve permitir a exclusão total dos dados do usuário caso requerido expressamente pelo usuário
+* RF007. O sistema deve permitir a criação de novos templates de _post_, exigindo então um nome para o template e o conteúdo desejado em texto
+* RF008. O sistema deve permitir a importação de conteúdo de texto por meio de URLs inseridas na aplicação durante a criação de novos templates
+* RF009. O sistema deve permitir a publicação dos templates, oferecendo a possibilidade da edição de conteúdo e também a seleção de quais as redes destino
+* RF010. O sistema deve permitir a integração com as plataformas que estarem disponíveis, realizando o processamento quando selecionado em um template
+* RF011. O sistema deve permitir o cadastro de perfis de integração, relacionando credenciais de acesso às plataformas conforme o contexto específico de criação
+* RF012. O sistema deve permitir a seleção de perfil de integração ao publicar um template
+* RF013. O sistema deve agrupar os dados de acesso conforme os perfis de integração cadastrados pelo usuário
+* RF014. O sistema deve permitir o gerenciamento de credenciais de acesso para as integrações das plataformas disponíveis de integração
+* RF015. O sistema deve permitir a inativação dos templates desejados, jogando-os para a lixeira com a possibilidade de resgate do template caso desejado
 
 ### 3.2. Considerações de Design
 
