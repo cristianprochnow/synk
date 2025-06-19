@@ -57,32 +57,51 @@ O sistema Synk é uma plataforma multiusuário (multi-tenant) para a criação, 
 6. **Editor de Conteúdo (Rich Text Editor)**
     - Fornece uma interface de usuário (UI) do tipo WYSIWYG ("What You See Is What You Get") para que os usuários possam formatar o texto dos templates com estilos (negrito, itálico, listas, etc.).
 
-### 3.1. Requisitos de Software
+### 3.3. Requisitos de Software
 - Apresentar os requisitos do tema proposto.
 - **Lista de Requisitos:** Apresentar uma lista contendo os Requisitos Funcionais (RF) e Não-Funcionais (RNF).
 - **Representação dos Requisitos:** Representar os RFs por meio de um Diagrama de Casos de Uso (UML).
 
-#### 3.1.1. Requisitos Funcionais
+#### 3.3.1. Requisitos Funcionais
 
-* RF001. O sistema deve permitir o cadastro de usuários por meio dos dados de nome, e-mail e senha
-* RF002. O sistema deve enviar e-mail de autenticação para validação de novos usuários, com um link clicável que servirá como confirmação da nova conta criada
-* RF003. O sistema deve permitir a edição dos dados do perfil do usuário como nome e senha, exigindo confirmação adicional para o segundo e também alteração da foto de perfil
-* RF004. O sistema deve validar o arquivo enviado como foto de perfil, restringindo pelo tamanho de arquivo (2mb) ou formato enviados (png, jpg, gif).
-* RF005. O sistema deve permitir a inativação dos dados do usuário, caso desejado
-* RF006. O sistema deve permitir a exclusão total dos dados do usuário caso requerido expressamente pelo usuário
-* RF007. O sistema deve permitir a criação de novos templates de _post_, exigindo então um nome para o template e o conteúdo desejado em texto
-* RF008. O sistema deve permitir a importação de conteúdo de texto por meio de URLs inseridas na aplicação durante a criação de novos templates
-* RF009. O sistema deve permitir a publicação dos templates, oferecendo a possibilidade da edição de conteúdo e também a seleção de quais as redes destino
-* RF010. O sistema deve permitir a integração com as plataformas que estarem disponíveis, realizando o processamento quando selecionado em um template
-* RF011. O sistema deve permitir o cadastro de perfis de integração, relacionando credenciais de acesso às plataformas conforme o contexto específico de criação
-* RF012. O sistema deve permitir a seleção de perfil de integração ao publicar um template
-* RF013. O sistema deve agrupar os dados de acesso conforme os perfis de integração cadastrados pelo usuário
-* RF014. O sistema deve permitir o gerenciamento de credenciais de acesso para as integrações das plataformas disponíveis de integração
-* RF015. O sistema deve permitir a inativação dos templates desejados, jogando-os para a lixeira com a possibilidade de resgate do template caso desejado
+**Módulo 1: Gestão de Contas de Usuário (Account Management)**
 
-#### 3.1.2. Requisitos Não-Funcionais
+- **RF-001:** O sistema deve permitir que um novo usuário se cadastre fornecendo Nome, E-mail e Senha.
+- **RF-002:** Após o cadastro, o sistema deve disparar um e-mail de verificação para o endereço fornecido, contendo um link único para confirmação e ativação da conta.
+- **RF-003:** O usuário autenticado deve poder editar seu nome de perfil.
+- **RF-004:** O usuário autenticado deve poder alterar sua senha, sendo necessário fornecer a senha atual e a nova senha duas vezes para confirmação.
+- **RF-005:** O usuário autenticado deve poder alterar sua foto de perfil.
+- **RF-006:** O sistema deve validar o arquivo de foto de perfil no momento do upload, aceitando apenas os formatos `PNG`, `JPG` e `GIF` e limitando o tamanho a, no máximo, `2MB`.
+- **RF-007:** O usuário deve poder inativar sua conta. Uma conta inativa não pode ser acessada, mas os dados são preservados.
+- **RF-008:** O usuário deve poder solicitar a exclusão permanente de sua conta e de todos os dados associados, em conformidade com as leis de proteção de dados.
 
-### 3.2. Considerações de Design
+**Módulo 2: Gestão de Templates**
+
+- **RF-009:** O usuário autenticado deve poder criar um novo template, fornecendo obrigatoriamente um `Nome` para o template e o `Conteúdo` do post.
+- **RF-010:** Durante a criação de um template, o usuário deve poder importar o conteúdo de texto a partir de uma `URL` de um post público.
+- **RF-011:** O sistema deve listar todos os templates criados pelo usuário.
+- **RF-012:** O usuário deve poder editar o nome e o conteúdo de um template existente.
+- **RF-013:** O usuário deve poder realizar uma exclusão lógica ("mover para a lixeira") de um template.
+- **RF-014:** O usuário deve poder restaurar um template que está na lixeira para a lista de templates ativos.
+
+**Módulo 3: Gestão de Integrações (Integration Management)**
+
+- **RF-015:** O usuário deve poder adicionar uma nova integração, selecionando uma plataforma disponível (ex: Twitter, LinkedIn) e fornecendo as credenciais de acesso necessárias (via OAuth ou chave de API).
+- **RF-016:** O usuário deve poder atribuir um nome/apelido personalizado para cada integração cadastrada (ex: "Meu Twitter Pessoal", "LinkedIn da Empresa").
+- **RF-017:** O sistema deve listar todas as integrações configuradas pelo usuário, indicando a plataforma e o nome personalizado.
+- **RF-018:** O usuário deve poder remover uma integração existente.
+- **RF-019**: O usuário deve poder atribuir *tags* a uma integração existente, para organização desses registros
+
+**Módulo 4: Fluxo de Publicação (Publishing Flow)**
+
+- **RF-020:** Para iniciar uma publicação, o usuário deve selecionar um de seus templates existentes.
+- **RF-021:** Na tela de publicação, o sistema deve permitir que o usuário edite livremente o conteúdo do post para aquela publicação específica, sem alterar o template original.
+- **RF-022:** Na mesma tela, o usuário deve poder selecionar uma ou mais de suas integrações ativas como destino para a publicação.
+- **RF-023:** Ao confirmar, o sistema deve enviar o conteúdo final para as APIs de cada uma das integrações de destino selecionadas.
+
+#### 3.3.2. Requisitos Não-Funcionais
+
+### 3.4. Considerações de Design
 
 #### 3.2.1. Visão inicial
 
