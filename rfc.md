@@ -101,6 +101,12 @@ O sistema Synk é uma plataforma multiusuário (multi-tenant) para a criação, 
 
 #### 3.3.2. Requisitos Não-Funcionais
 
+* **RNF-001:** A aplicação web deve ser totalmente funcional nas duas últimas versões estáveis dos principais navegadores: Google Chrome, Mozilla Firefox, Safari e Microsoft Edge.
+* **RNF-002:** A interface deve ser responsiva e se adaptar para garantir uma boa experiência de uso em dispositivos móveis (smartphones), tablets e desktops.
+* **RNF-003:** O tratamento de dados pessoais dos usuários deve estar em total conformidade com a Lei Geral de Proteção de Dados (LGPD) do Brasil.
+* **RNF-004:** A forma como a Synk interage com as APIs de outras plataformas deve respeitar rigorosamente os Termos de Serviço e as políticas de uso de cada uma delas para evitar o bloqueio da aplicação.
+* **RNF-005:** O prazo de envio à API das integrações será realizada de maneira assíncrona e deve ser até 1 hora após sua publicação dentro da plataforma.
+
 ### 3.4. Considerações de Design
 
 #### 3.2.1. Visão inicial
