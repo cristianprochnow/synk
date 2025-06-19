@@ -35,14 +35,27 @@ O projeto nasceu para resolver um desafio comum e frustrante: a necessidade de a
 
 ## 3. Especificação Técnica
 
-O projeto tem como objetivo o gerenciamento de templates que são relacionados a cada usuário. O uso desses templates poderá ser feito para publicação em redes sociais que a aplicação tiver integração. Cada uma dessas integrações vão necessitar das configurações específicas, contendo então os dados de acesso para cada uma que for desejada. Além disso, há também a funcionalidade de importar conteúdo de algum _post_ específico, para que o usuário possa transformar qualquer conteúdo em template. Partindo desse pressuposto, temos então os alicerces de:
+### 3.1. Resumo
 
-* Gerenciamento de usuário
-* Gerenciamento de templates
-* Gerenciamento de perfis de integração
-* Integração com redes sociais para realizar _posts_
-* Importação de conteúdo por meio de link
-* Interface avançada para edição de texto
+O sistema Synk é uma plataforma multiusuário (multi-tenant) para a criação, gerenciamento e publicação de conteúdo em redes sociais, baseada em um sistema de templates e integrações com APIs de terceiros.
+
+### 3.2. Componentes Principais do Sistema
+
+1. **Módulo de Usuários (Identity & Access Management)**
+    - Responsável pelo cadastro, login (autenticação) e controle de permissões (autorização) dos usuários.
+2. **Módulo de Templates**
+    - Permite operações de CRUD (Criar, Ler, Atualizar, Excluir) para os templates de posts.
+    - Cada template é estritamente vinculado ao usuário que o criou.
+3. **Módulo de Integrações**
+    - Gerencia as configurações e credenciais (tokens, chaves de API) para cada plataforma de destino (ex: LinkedIn, Twitter, Slack).
+    - Deve garantir o armazenamento seguro das informações sensíveis.
+4. **Módulo de Publicação (Publishing Engine)**
+    - Utiliza um template e uma ou mais integrações ativas para realizar a postagem do conteúdo através das APIs correspondentes.
+    - Responsável por tratar as respostas (sucesso/erro) de cada API.
+5. **Módulo de Importação (Content Importer)**
+    - Processa uma URL de um post público para extrair seu conteúdo e popular os campos de um novo template.
+6. **Editor de Conteúdo (Rich Text Editor)**
+    - Fornece uma interface de usuário (UI) do tipo WYSIWYG ("What You See Is What You Get") para que os usuários possam formatar o texto dos templates com estilos (negrito, itálico, listas, etc.).
 
 ### 3.1. Requisitos de Software
 - Apresentar os requisitos do tema proposto.
