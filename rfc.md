@@ -71,7 +71,7 @@ O projeto tem como objetivo o gerenciamento de templates que são relacionados a
 
 ### 3.2. Considerações de Design
 
-#### 3.2.1. Visão inicia
+#### 3.2.1. Visão inicial
 
 - Discussão sobre as escolhas de design, incluindo alternativas consideradas e justificativas para as decisões tomadas.
 - **Visão Inicial da Arquitetura**: Descrição dos componentes principais e suas interconexões.
