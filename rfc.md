@@ -7,13 +7,13 @@
 
 # Resumo
 
-Comunicação é a chave em qualquer que seja o ato sendo realizado. Com isso em vista, percebi dois gargalos principais no dia a dia, ao qual essa aplicação, de forma prática e simples poderá resolver.
+Gerenciar a comunicação em múltiplas plataformas sociais é uma tarefa repetitiva e demorada. Equipes de marketing perdem tempo postando manualmente em cada rede, enquanto times de desenvolvimento lutam para comunicar atualizações de forma ágil e consistente.
 
-Sendo assim, a facilidade de ter *templates* prontos para *posts* de diferentes contextos de atuação e para diferentes finalidades tem o potencial de poupar tempo e esforço. No time de *marketing* pode ocorrer uma sequência maçante de passos, ao qual os integrantes dessa área possuem diferentes objetivos de publicação, tendo então que entrar de uma em uma manualmente. E, em um time de desenvolvimento, o problema já pode ser relacionado simplesmente com a comunicação referente à novas atualizações do produto principal.
+Synk surge como a solução para este desafio. Nossa plataforma centraliza e automatiza a publicação de conteúdo, permitindo que você economize tempo e mantenha a consistência da sua marca.
 
-Portanto, Synk é um projeto que visa resolver essas e outras pendências de uma forma prática e simples, sem exigir uma adaptação de dia a dia muito grande, nem o reaprendizado total que é o uso de uma nova ferramenta. Então por meio de templates e integrações, a criação de *posts* e o alcance à linha final das mensagens ficará mais simples e rápido.
+Através de um sistema intuitivo de **templates** e **integrações diretas** com as principais redes sociais, o Synk transforma um processo de vários passos em um único clique. Crie seus modelos de posts para diferentes contextos — seja um lançamento de produto, uma campanha de marketing ou uma nota de atualização — e publique simultaneamente onde seu público estiver.
 
-Synk não é um CRM e nem visa ser. O foco dessa aplicação é ser uma camada de abstração que alimina um esforço desnecessário e repetitivo que um ser humano teria que fazer, ou então proporcionar uma forma fácil de realizar algo que outro ser humano não consegue fazer por falta de tempo.
+É importante ressaltar: o Synk não é um CRM. Nosso foco é ser uma ferramenta especialista em agilidade, eliminando o esforço manual e repetitivo para que sua equipe possa se concentrar no que realmente importa: a estratégia e a criação de conteúdo de valor.
 
 ## 1. Introdução
 
@@ -43,7 +43,7 @@ O projeto tem como objetivo o gerenciamento de templates que são relacionados a
 - **Lista de Requisitos:** Apresentar uma lista contendo os Requisitos Funcionais (RF) e Não-Funcionais (RNF).
 - **Representação dos Requisitos:** Representar os RFs por meio de um Diagrama de Casos de Uso (UML).
 
-**Requisitos Funcionais**
+#### 3.1.1. Requisitos Funcionais
 
 * RF001. O sistema deve permitir o cadastro de usuários por meio dos dados de nome, e-mail e senha
 * RF002. O sistema deve enviar e-mail de autenticação para validação de novos usuários, com um link clicável que servirá como confirmação da nova conta criada
@@ -61,7 +61,11 @@ O projeto tem como objetivo o gerenciamento de templates que são relacionados a
 * RF014. O sistema deve permitir o gerenciamento de credenciais de acesso para as integrações das plataformas disponíveis de integração
 * RF015. O sistema deve permitir a inativação dos templates desejados, jogando-os para a lixeira com a possibilidade de resgate do template caso desejado
 
+#### 3.1.2. Requisitos Não-Funcionais
+
 ### 3.2. Considerações de Design
+
+#### 3.2.1. Visão inicia
 
 - Discussão sobre as escolhas de design, incluindo alternativas consideradas e justificativas para as decisões tomadas.
 - **Visão Inicial da Arquitetura**: Descrição dos componentes principais e suas interconexões.
