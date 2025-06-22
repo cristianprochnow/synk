@@ -154,21 +154,92 @@ flowchart TD
 
 ### 3.4. Considerações de Design
 
-#### 3.2.1. Visão inicial
+#### 3.4.1. Visão inicial
 
-- Discussão sobre as escolhas de design, incluindo alternativas consideradas e justificativas para as decisões tomadas.
-- **Visão Inicial da Arquitetura**: Descrição dos componentes principais e suas interconexões.
-- **Padrões de Arquitetura**: Indicação de padrões específicos utilizados (ex.: MVC, Microserviços).
+A arquitetura está separada em apresentação e em processamento principal e paralelo. Cada um desses itens é separado em serviços distintos, que consomem o mesmo banco de dados. Importante ressaltar que não se trata de microsserviços, visto que a instância do banco de dados é compartilhado entre todos. Sendo assim, são apenas serviços separados para o acoplamento de responsabilidades.
+
+#### 3.4.2. Arquitetura
+
+- **Frontend** para interação direta com os usuários por meio da *web*, realizando a comunicação diretamente com o serviço de Backend. Esse serviço usa a instância local do cache do navegador ao qual está sendo usado.
+- **Backend** fica responsável pelo processamento principal da aplicação. Ele fica responsável por receber todas as chamadas do Frontend. A autenticação é feita por meio do serviço de Auth, que fica responsável pela autenticação do usuário. Há também à disponilidade uma instância de cache com foco em performance, além da interação direta com a instância de banco de dados. Esse serviço envia as mensagens para o serviço de mensageria, que serve então outros dois serviços assíncronos.
+- **Auth** é o serviço responsável por registrar o *login* dos usuários, interagindo tanto o banco de dados, como também com o serviço de cache para guardar a sessão.
+- **Queuer** é o serviço de mensageria (Broker) que recebe as chamadas do Backend (*Producer*) e serve os serviços Mailer (*Consumer*) e Publisher (*Consumer*).
+- **Mailer** recebe as mensagens do Queuer relacionadas ao envio assíncrono de e-mails que também interage com o banco de dados para busca de informações.
+- **Publisher** recebe as mensagens do Queuer relacionadas à publicação dos posts por meio das integrações devidas, que também interage com o banco de dados para busca de informações.
+
+```mermaid
+flowchart TD
+    %% Definição de Estilos
+    style BKG fill:#f9f,stroke:#333,stroke-width:2px
+    style MQ fill:#ff9,stroke:#333,stroke-width:2px
+    style MAILER fill:#9cf,stroke:#333,stroke-width:2px
+    style PUB fill:#9cf,stroke:#333,stroke-width:2px
+
+    %% Atores e Início do Fluxo
+    U[Usuário]
+
+    subgraph "Arquitetura Synk"
+        %% Componentes Síncronos (Core)
+        subgraph "Plataforma Core (Processamento Síncrono)"
+            direction TB
+            FE["Frontend (React + Vite)"]
+            BKG["Backend (Golang)"]
+            AUTH["Auth (Golang)"]
+            DB[(DB MySQL)]
+            RC["Cache Remoto (Redis)"]
+            LC["Cache Local (LocalStorage)"]
+            
+            FE <--> LC
+            BKG <--> AUTH
+            BKG <--> DB
+            BKG <--> RC
+            AUTH --> DB
+            AUTH --> RC
+        end
+
+        %% Broker de Mensageria
+        subgraph "Sistema de Filas (Broker)"
+            MQ["Messaging (RabbitMQ)"]
+        end
+
+        %% Componentes Assíncronos (Workers)
+        subgraph "Serviços Assíncronos (Consumers)"
+            direction LR
+            MAILER["Mailer (Golang)"]
+            PUB["Publisher (Golang)"]
+
+            MAILER --> DB
+            PUB --> DB
+        end
+    end
+    
+    %% Conexões Principais
+    U --> FE
+    FE -- Requisições API --> BKG
+    BKG -- Produz Mensagem --> MQ
+    MQ -- Roteia para --> MAILER
+    MQ -- Roteia para --> PUB
+    
+    %% Interações com Sistemas Externos
+    subgraph "Sistemas Externos"
+        direction RL
+        API[APIs de Plataformas Sociais]
+    end
+
+    PUB -- Realiza Post --> API
+```
+#### 3.4.3. Modelagem C4
+
 - **Modelos C4**: Detalhamento da arquitetura em níveis: Contexto, Contêineres, Componentes, Código.
 
-### 3.3. Stack Tecnológica
+#### 3.4.4. Stack Tecnológica
 
 - **Linguagens de Programação**: Justificativa para a escolha de linguagens específicas.
 - **Frameworks e Bibliotecas**: Frameworks e bibliotecas a serem utilizados.
 - **Ferramentas de Desenvolvimento e Gestão de Projeto**: Ferramentas para desenvolvimento e gestão do projeto.
   ... qualquer outra informação referente a stack tecnológica ...
 
-### 3.4. Considerações de Segurança
+### 3.5. Considerações de Segurança
 
 Análise de possíveis questões de segurança e como mitigá-las.
 
