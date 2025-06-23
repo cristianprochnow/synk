@@ -234,10 +234,15 @@ flowchart TD
 
 #### 3.4.4. Stack Tecnológica
 
-- **Linguagens de Programação**: Justificativa para a escolha de linguagens específicas.
-- **Frameworks e Bibliotecas**: Frameworks e bibliotecas a serem utilizados.
-- **Ferramentas de Desenvolvimento e Gestão de Projeto**: Ferramentas para desenvolvimento e gestão do projeto.
-  ... qualquer outra informação referente a stack tecnológica ...
+Em nosso **Frontend**, será usado React para a construção da interface. Junto a isto, para a compilação do código TypeScript que será usado junto a essa lib, o Vite entrará em prática. Com isso, o uso do React será o mais puro possível, sem uso de qualquer *framework*. Com isso será possível ter uma ferramenta robusta e, ainda sim, leve e performática para interação com a interface.
+
+Para o cache local de alguns dados, auxiliando a usabilidade do usuário no navegador, será usado o recurso nativo da plataforma que é o *Local Storage*. Com isso, será possível ter uma interface simples, mas ainda sim muito eficiente, para persistência de dados básicos e/ou extensos. E, para o cache de dados para o lado dos serviços externos, há um serviço em Redis rodando.
+
+Para o banco de dados a ferramenta usada será o MySQL, ao qual é um banco de dados estabelecido e que possui muita documentação disponível. Além disso, com a nova versão do MySQL o uso se tornou ainda mais interessante pelo melhoramento da performance e outros recursos adicionados.
+
+Para sistema de mensageria, a ferramenta será o RabbitMQ, devido à grande disponibilidade de documentação e a ser totalmente *open source*. Além disso, é uma tecnologia amplamente usada atualmente na indústria em diversas aplicações. Sendo assim, é um fundamento interessante para justificar o uso.
+
+E, para os serviços distribuídos da aplicação, tanto os síncronos, como assíncronos, será usada a linguagem Golang, sem uso de qualquer framework. A ideia é que essa interação seja a mais pura possível, usando as ferramentas que a própria linguagem já possui embutida. Assim, o objetivo é usar *libs* apenas caso necessário para algum problema específico, ao qual as tecnologias nativas não possam ser adaptadas adequadamente ao uso em questão.
 
 ### 3.5. Considerações de Segurança
 
@@ -249,7 +254,9 @@ Descrição dos passos seguintes após a conclusão do documento, com uma visão
 
 ## 5. Referências
 
-Listagem de todas as fontes de pesquisa, frameworks, bibliotecas e ferramentas que serão utilizadas.
+- [React](https://react.dev/)
+- [Vite](https://vite.dev/)
+- 
 
 ## 6. Apêndices (Opcionais)
 
