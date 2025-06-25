@@ -107,7 +107,7 @@ O sistema Synk é uma plataforma multiusuário (multi-tenant) para a criação, 
 * **RNF-004:** A forma como a Synk interage com as APIs de outras plataformas deve respeitar rigorosamente os Termos de Serviço e as políticas de uso de cada uma delas para evitar o bloqueio da aplicação.
 * **RNF-005:** O prazo de envio à API das integrações será realizada de maneira assíncrona e deve ser até 1 hora após sua publicação dentro da plataforma.
 
-### 3.3.3. Diagrama UML
+#### 3.3.3. Fluxo
 
 ```mermaid
 flowchart TD
@@ -151,6 +151,10 @@ flowchart TD
 
     style J fill:#0a0,stroke:#333,stroke-width:4px,color:#fff
 ```
+
+#### 3.3.4. Diagrama UML
+
+![Diagrama UML](./assets/use-case.webp)
 
 ### 3.4. Considerações de Design
 
