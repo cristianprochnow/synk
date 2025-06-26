@@ -270,7 +270,11 @@ Descrição dos passos seguintes após a conclusão do documento, com uma visão
 
 - [React](https://react.dev/)
 - [Vite](https://vite.dev/)
-- 
+- [Golang](https://go.dev/)
+- [Redis](https://redis.io/)
+- [LocalStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+- [RabbitMQ](https://www.rabbitmq.com/)
+- [MySQL](https://www.mysql.com/)
 
 ## 6. Apêndices (Opcionais)
 
