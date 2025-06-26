@@ -236,11 +236,11 @@ flowchart TD
 
 ##### 3.4.3.1. Contexto do Sistema (C1)
 
-![[c1.webp]]
+![Modelo C1](./assets/c1.webp)
 
 ##### 3.4.3.2. Contêineres (C2)
 
-![[c2.webp]]
+![Modelo C1](./assets/c2.webp)
 
 ##### 3.4.3.3. Componentes (C3)
 
