@@ -234,7 +234,17 @@ flowchart TD
 ```
 #### 3.4.3. Modelagem C4
 
-- **Modelos C4**: Detalhamento da arquitetura em níveis: Contexto, Contêineres, Componentes, Código.
+##### 3.4.3.1. Contexto do Sistema (C1)
+
+![[c1.webp]]
+
+##### 3.4.3.2. Contêineres (C2)
+
+![[c2.webp]]
+
+##### 3.4.3.3. Componentes (C3)
+
+##### 3.4.3.4. Código (C4)
 
 #### 3.4.4. Stack Tecnológica
 
