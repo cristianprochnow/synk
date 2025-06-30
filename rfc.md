@@ -260,7 +260,16 @@ E, o gerenciamento do projeto, incluindo o planejamento de tarefas, acompanhamen
 
 ### 3.5. Considerações de Segurança
 
-Análise de possíveis questões de segurança e como mitigá-las.
+* **Hashing de Senhas**: Para atender ao RF-001 e RF-004, todas as senhas de usuários serão armazenadas no banco de dados MySQL utilizando um algoritmo de hashing forte e moderno, como o Bcrypt ou Argon2. Senhas nunca serão armazenadas em texto plano, garantindo que mesmo em caso de um vazamento do banco de dados, as credenciais permaneçam protegidas.
+* **Gerenciamento de Sessão com JWT**: A autenticação de usuários será gerenciada através de JSON Web Tokens (JWT). Após o login, o backend Golang gerará um token assinado que será enviado ao frontend. Este token será exigido em todas as requisições a endpoints protegidos. Os tokens terão um tempo de expiração curto para limitar a janela de oportunidade em caso de roubo.
+* **Tokens de Uso Único**: O link de verificação de e-mail conterá um token seguro, de uso único e com tempo de expiração curto para prevenir ataques de replay ou uso indevido.
+* **Criptografia em Trânsito:** Toda a comunicação entre o cliente (navegador), o frontend React e os serviços de backend em Golang será obrigatoriamente feita sobre **HTTPS (TLS)**, garantindo que os dados não possam ser interceptados ou alterados durante a transmissão.
+* **Proteção de Chaves de API e Segredos:** As credenciais de integração com plataformas de terceiros (**RF-015**), como chaves de API e tokens OAuth, são dados extremamente sensíveis. Elas serão **criptografadas em repouso** no banco de dados MySQL ou então em arquivos de configuração confidenciais.
+* **Validação de Entradas no Backend:** Nenhum dado proveniente do cliente será confiável. Todos os serviços em Golang irão validar e sanitizar rigorosamente qualquer entrada para prevenir ataques como:
+	* **SQL Injection:** Utilizando exclusivamente _prepared statements_ e _queries parametrizadas_ para interagir com o MySQL.
+	* **Cross-Site Scripting (XSS):** Garantindo que qualquer conteúdo gerado pelo usuário (nomes, conteúdo de templates) que seja renderizado na tela seja devidamente "escapado".
+	* **Server-Side Request Forgery (SSRF):** A funcionalidade de importação por URL representa um risco de SSRF. O backend validará a URL recebida, garantindo que ela aponte para endereços públicos e não para recursos da rede interna da GCP.
+* **Segurança no Upload de Arquivos:** Além das validações de formato e tamanho no frontend (**RF-006**), o backend Golang fará uma revalidação completa do arquivo. Os arquivos de perfil serão armazenados em um local seguro (preferencialmente um bucket no Google Cloud Storage em vez do sistema de arquivos da VM) com permissões restritas.
 
 ## 4. Próximos Passos
 
