@@ -254,6 +254,10 @@ Para sistema de mensageria, a ferramenta será o RabbitMQ, devido à grande disp
 
 E, para os serviços distribuídos da aplicação, tanto os síncronos, como assíncronos, será usada a linguagem Golang, sem uso de qualquer framework. A ideia é que essa interação seja a mais pura possível, usando as ferramentas que a própria linguagem já possui embutida. Assim, o objetivo é usar *libs* apenas caso necessário para algum problema específico, ao qual as tecnologias nativas não possam ser adaptadas adequadamente ao uso em questão.
 
+Já, para a infraestrutura de nuvem e o processo de _deploy_, a aplicação será hospedada em uma máquina virtual (VM) na **Google Cloud Platform (GCP)**. Essa escolha se dá pela flexibilidade e escalabilidade que o ambiente da GCP oferece. Todo o código-fonte será versionado e hospedado no **GitHub**, que servirá como nosso repositório central. Os processos de Integração Contínua (CI) e Entrega Contínua (CD) serão automatizados utilizando o **GitHub Actions**, garantindo que cada atualização no código seja testada e implantada de forma padronizada e segura diretamente na VM, otimizando o fluxo de desenvolvimento e entrega.
+
+E, o gerenciamento do projeto, incluindo o planejamento de tarefas, acompanhamento de progresso e organização de _sprints_, será conduzido através do **GitHub Projects**. Essa ferramenta será integrada diretamente ao nosso repositório de código, o que facilitará a vinculação de _issues_, _pull requests_ e discussões às tarefas do projeto. Com isso, teremos uma visão clara e centralizada do andamento do desenvolvimento, promovendo a transparência e a colaboração entre a equipe de forma ágil e eficiente.
+
 ### 3.5. Considerações de Segurança
 
 Análise de possíveis questões de segurança e como mitigá-las.
