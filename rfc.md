@@ -273,7 +273,15 @@ E, o gerenciamento do projeto, incluindo o planejamento de tarefas, acompanhamen
 
 ## 4. Próximos Passos
 
-Descrição dos passos seguintes após a conclusão do documento, com uma visão geral do cronograma para Portfólio I e II.
+Com a especificação técnica e a arquitetura definidas, o desenvolvimento do projeto seguirá uma sequência lógica para garantir a construção incremental e organizada dos módulos. Os próximos passos planejados são:
+
+1. **Estruturação do Banco de Dados e Cache:** O primeiro passo será o design e a criação do esquema completo do banco de dados MySQL, definindo todas as tabelas, relacionamentos e tipos de dados necessários para suportar os requisitos funcionais. E, por fim, será implementada a camada de cache com Redis para otimizar as consultas frequentes e melhorar a performance geral da aplicação, tanto no lado do servidor quanto na experiência do usuário.
+2. **Configuração dos Ambientes:** Em paralelo, será realizada a configuração da infraestrutura, incluindo o provisionamento da máquina virtual na Google Cloud Platform e a configuração inicial do pipeline de CI/CD com GitHub Actions para automatizar os deploys.
+3. **Desenvolvimento do Serviço de API Principal (Backend):** O foco se voltará para o desenvolvimento dos serviços síncronos em Golang, criando os endpoints da API RESTful para as operações de CRUD (Criar, Ler, Atualizar, Deletar) dos módulos de Gestão de Templates e Gestão de Integrações.
+4. **Criação das Telas (Frontend):** Com a API principal disponível, a equipe de frontend começará a desenvolver as interfaces em React correspondentes a essas funcionalidades, permitindo a interação do usuário com os templates e integrações.
+5. **Desenvolvimento dos Serviços Assíncronos e de Autenticação:** Na sequência, o trabalho será dividido em duas frentes cruciais:
+	- **Serviço de Autenticação:** Desenvolvimento do módulo de Gestão de Contas de Usuário, incluindo os endpoints para cadastro, login, verificação e gerenciamento de perfil.
+    - **Filas e Workers (Backend):** Implementação dos _workers_ em Golang que consumirão as mensagens do RabbitMQ para processar tarefas assíncronas, como o envio de e-mails de verificação e o fluxo de publicação.
 
 ## 5. Referências
 
