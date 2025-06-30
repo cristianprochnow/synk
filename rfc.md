@@ -272,13 +272,13 @@ Descrição dos passos seguintes após a conclusão do documento, com uma visão
 - [Vite](https://vite.dev/)
 - [Golang](https://go.dev/)
 - [Redis](https://redis.io/)
-- [LocalStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
 - [RabbitMQ](https://www.rabbitmq.com/)
 - [MySQL](https://www.mysql.com/)
-
-## 6. Apêndices (Opcionais)
-
-Informações complementares, dados de suporte ou discussões detalhadas fora do corpo principal.
+- [Google Cloud Platform (GCP)](https://cloud.google.com/)
+- [GitHub](https://github.com/)
+- [GitHub Actions](https://github.com/features/actions)
+- [GitHub Projects](https://github.com/features/project-management)
+- [Documentação C4](https://c4model.com/diagrams)
 ## 7. Avaliações de Professores
 
 Adicionar três páginas no final do RFC para que os Professores escolhidos possam fazer suas considerações e assinatura:
