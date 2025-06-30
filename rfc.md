@@ -237,10 +237,11 @@ flowchart TD
 
 ##### 3.4.3.2. Contêineres (C2)
 
-![Modelo C1](./assets/c2.webp)
+![Modelo C2](./assets/c2.webp)
 
 ##### 3.4.3.3. Componentes (C3)
 
+![Modelo C3](./assets/c3.webp)
 #### 3.4.4. Stack Tecnológica
 
 Em nosso **Frontend**, será usado React para a construção da interface. Junto a isto, para a compilação do código TypeScript que será usado junto a essa lib, o Vite entrará em prática. Com isso, o uso do React será o mais puro possível, sem uso de qualquer *framework*. Com isso será possível ter uma ferramenta robusta e, ainda sim, leve e performática para interação com a interface.
