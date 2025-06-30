@@ -58,9 +58,6 @@ O sistema Synk é uma plataforma multiusuário (multi-tenant) para a criação, 
     - Fornece uma interface de usuário (UI) do tipo WYSIWYG ("What You See Is What You Get") para que os usuários possam formatar o texto dos templates com estilos (negrito, itálico, listas, etc.).
 
 ### 3.3. Requisitos de Software
-- Apresentar os requisitos do tema proposto.
-- **Lista de Requisitos:** Apresentar uma lista contendo os Requisitos Funcionais (RF) e Não-Funcionais (RNF).
-- **Representação dos Requisitos:** Representar os RFs por meio de um Diagrama de Casos de Uso (UML).
 
 #### 3.3.1. Requisitos Funcionais
 
